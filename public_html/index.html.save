@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DBTeam3's Webpage</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<br>
+		Group Names: Nalin Richardson, Brad Olson, Patrick Wigger, Evan Lebakken
+	</br>
+	<br>
+		1.    The command you type into console to check if apachectl is running is 'sudo apachectl status or fullstatus'.
+	</br>
+	<br>
+		2.    GET is a simpler and faster version of POST. POST should be used when the server or database needs to be updated, if you have a large amount of data (no size limitation) and for sending user input. HEAD just returns the header of a resource rather than the entire resource.
+	</br>
+	<br>
+	</br>
+<br>
+        </br>
+
+</body>
+</html>
