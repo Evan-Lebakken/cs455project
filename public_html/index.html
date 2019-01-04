@@ -7,85 +7,18 @@
 </head>
 
 <body>
-	<h1>
-		Group Names: Nalin Richardson, Brad Olson, Patrick Wigger, Evan Lebakken
-	</h1>
-	<br>
-		1. The command you type into console to check if apachectl is running is 'sudo apachectl status or fullstatus'.
-	</br>
-	<br>
-		2. GET is a simpler and faster version of POST. POST should be used when the server or database needs to be updated, if you have a large amount of data (no size limitation) and for sending user input. HEAD just returns the header of a resource rather than the entire resource.
-	</br>
-	<br>
-		3. A ServerRoot is the top of the directory tree that contains server's log, config, and error files. A DocumentRoot is the directory documents are served out of, and by default a DocumentRoot takes all requuests
-	</br>
-	<br>
-		4. The web browser listens on port 80 and port 443
-        </br>
-	<br>
-		5. The directory apache serves documents from is '../var/www/html'.
-        </br>
-	<br>
-		6. '/var/log/apache2/access.log/ contains all of Apache's traffic logs. '/var/log/apache2/error.log' contains Apache's error logs. To see the most recent events at the end of the file, use 'tail' command before the directory
-        </br>
-	<br>
-		7. A directory index file is what is served if a directory is requested. It would be nice to have one in each directory because it means that all the information is not all stored in one file.
-        </br>
-	<br>
-		<p>8. We acheived this through a series of commands within the command line.</p>
-		<p class="tab1">> sudo a2enmod userdir </p>
-		<p class="tab1">> sudo nano /etc/apache2/mods-enabled/userdir.conf</p>
+	<div class="content_section_text">
+		Links to our data base interaction pages:<br>
+		<a href = "http://54.174.200.127/~ubuntu/showPassengers.php">Passenger List Page</a><p>
+		<a href = "http://54.174.200.127/~ubuntu/passengerForm.php">Passenger Insert Form Page</a><p>
+		<a href = "http://54.174.200.127/~ubuntu/SQLForm.php">SQL Form Page</a><p>
+		<a href = "http://54.174.200.127/~ubuntu/proposal.html">Our Project Proposal</a><p> 
+		<a href = "http://54.174.200.127/~ubuntu/cellarMock.php">Cellar Mock</a><p>
+	</div>
 
-		<p class="tab1"> Add this to the file:</p>
-		<p class="tab1"> "IfModule mod_userdir.c></p>
-		<p class="tab2">  UserDir public_html</p>
-		<p class="tab2">  UserDir disabled root</p>
-
-		<p class="tab2"> Directory /home/*/public_html></p>
-		<p class="tab2"> AllowOverride All</p>
-		<p class="tab2"> Options MultiViews Indexes SymLinksIfOwnerMatch</p>
-		<p class="tab2"> Limit GET POST OPTIONS></p>
-		<p class="tab3"> # Apache <= 2.2:</p>
-		<p class="tab3"> # Order allow,deny</p>	
-		<p class="tab3"> # Allow from all</p>
-
-		<p class="tab3"> # Apache >= 2.4:</p>
-		<p class="tab3"> Require all granted</p>
-		<p class="tab2"> /Limit></p>
-		<p class="tab2"> LimitExcept GET POST OPTIONS></p>
-		<p class="tab3"> # Apache <= 2.2:</p>
-		<p class="tab3"> # Order deny,allow</p>
-		<p class="tab3"> # Deny from all</p>
-
-		<p class="tab3"> # Apache >= 2.4:</p>
-		<p class="tab3"> Require all denied</p>
-		<p class="tab2"> /LimitExcept></p>
-		<p class="tab2"> /Directory></p>
-		<p class="tab1"> /IfModule>"</p>
-
-
-		<p class="tab1">> sudo service apache2 restart</p>
-		<p class="tab1">> mkdir /home/$USER/public_html</p>
-
-	</br>
-	<br>
-		9. You create a password protected directory by taking three steps. First you change the file apache2.conf so that the line reading 'AllowOverride none' instead reads 'AllowOverride all'. Then you create the file '/etc/apache2/.htpasswd', and fill it with username:password pairs using the command 'sudo htpasswd -c /etc/apache2/.htpasswd username' multiple times, but without the -c after the first time. Thirdly you create a .htaccess file in the directory you want to protect and add these lines to the file:<br/>
-AuthUserFile /etc/apache2/.htpasswd<br/>
-AuthType Basic<br/>
-AuthName 'Restricted Content'<br/>
-Require valid-user
-
-	</br>	
-	<br>
-		10. You redirect 404 errors within your domain by adding the following lines to the top of .htaccess in the folder of the file index.html:<br/>
-DirectoryIndex index.html<br/>
-ErrorDocument 404 http://54.174.200.127/~ubuntu/
-
-        </br>
-	<br>
 	<div class="content_section floating_element">
-          <img src="uploads/Generic_Tomato_Plant.jpg" style="width:200px;height:200px;" class="center"/>
-        <div class="content_section_text">
+		<img src="uploads/Generic_Tomato_Plant.jpg" style="width:200px;height:200px;" class="center"/>
+	</div>
 
 
 

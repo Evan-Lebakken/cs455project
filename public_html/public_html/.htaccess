@@ -1,0 +1,6 @@
+DirectoryIndex index.html
+ErrorDocument 404 http://54.174.200.127/~ubuntu/
+AuthUserFile /etc/apache2/.htpasswd
+AuthType Basic
+AuthName 'You shall not pass'
+Require valid-user
